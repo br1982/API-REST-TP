@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 """
 db_connect = create_engine('sqlite:///C:\\Users\\Balta\\Desktop\\PythonTest\\API-REST-TP\\chinook.db')
 """
-db_connect = create_engine('sqlite:///C:\\Users\\Balta\\Desktop\\API-REST-TPv1\\chinook.db')
+db_connect = create_engine('sqlite:////Users/damianwajser/git/irso/br/API-REST-TP/chinook.db')
 
 class Validate(Resource):
     conditions = None

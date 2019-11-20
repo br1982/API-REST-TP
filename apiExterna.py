@@ -23,14 +23,13 @@ def getCoachByTeam(team):
     }
     
     response = requests.get(url, data=payload, headers=headers, params=params)
-    #print("debug")
-    #print(response.text)
+    print("debug")
+    print(response.status_code)
     response_json = json.loads(response.text)
-    return response_json
     result = response_json['result']
     
     for equipo in result:
         if equipo['team_name'] == team:
-            return jsonify({'data_dts': equipo['coaches']})
+            return jsonify(equipo['coaches'])
 
     return None
